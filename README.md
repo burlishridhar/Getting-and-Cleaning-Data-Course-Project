@@ -13,7 +13,7 @@ The objective was to create a R script called run_analysis.R that does the follo
 
 STEPS INVOLVED IN THE ANALYSIS
 --------------------------------------------------------------------------------------------------------------------------
-The analysis is being performed in the following steps in the R Script. Please note that user input is only required at step 2 to run the file.
+The analysis consists of five basic steps whihc have been detailed below.
 
 Step 1 - Install and load the reshape2 package
           
