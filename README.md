@@ -41,7 +41,8 @@ This is the function which performs the analysis and writes the results back to 
 STEPS TO RUN THE ANALYSIS
 --------------------------------------------------------------------------------------------------------------------------
 
-Run the script and then call the function runAnalysis(). The function takes only a single arguement which is the name of the folder containing the train and test data sets
+Run the script and then call the function runAnalysis(). The function takes only a single arguement which is the name of the folder containing the train and test data sets.
+For example, runAnalysis("UCI HAR Dataset")
 
 
 
