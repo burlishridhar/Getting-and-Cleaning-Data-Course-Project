@@ -21,7 +21,7 @@ The user must enter the name of the directory which contains the data. A default
 
 Step 3 - Define the relevant names and positions to be extracted for features and activities
 
-This step feines the positions and names for teh features and activities
+This step defines the positions and names for the features and activities
           
 Step 4 - Define a function to get a clean data frame from the 'train' dataset
 
