@@ -1,30 +1,20 @@
 # The analysis is being performed in the following steps :
 
 #  Step 1 - Install and load the reshape2 package
-#  Step 2 - Enter the path to the dataset folder in the DATA_PATH variable - IMPORTANT!!
-#  Step 3 - Define the relevant names and positions to be extracted for features and activities
-#  Step 4 - Define a function to get a clean data frame from the 'train' dataset
-#  Step 5 - Define a function to get a clean data frame from the 'test' dataset
-#  Step 6 - Define a function which will generate the final tidy data set by merging 
+#  Step 2 - Define the relevant names and positions to be extracted for features and activities
+#  Step 3 - Define a function to get a clean data frame from the 'train' dataset
+#  Step 4 - Define a function to get a clean data frame from the 'test' dataset
+#  Step 5 - Define a function which will generate the final tidy data set by merging 
 #           the two datasets and calculating the mean values
 
-# CALL THE FUNCTION DEFINED IN STEP 6 ABOVE TO RUN THE ANALYSIS AND GET THE TIDY DATA SET
+# CALL THE FUNCTION DEFINED IN STEP 5 ABOVE TO RUN THE ANALYSIS AND GET THE TIDY DATA SET
 
 
-##  ------------- Step 1 - start 
+##  ------------- Step 1 - start
 
       # UNCOMMENT THE TWO LINES BELOW TO INSTALL AND LOAD reshape2 PACKAGE
       # install.packages("reshape2")
       # library("reshape2")
-
-##  ------------- Step 2 - start 
-
-      # The Path containing the Test and Train data sets should be entered below
-      # Ensure that your working directory is set properly
-
-      # DATA_PATH <- c("ENTER_FOLDER_PATH_HERE")
-       DATA_PATH  <- c("UCI HAR Dataset")
-
 
 
 ##  ------------- Step 3 - start 
@@ -41,7 +31,7 @@
 ##  ------------- Step 4 - start 
 
       # Function to get a clean data frame from the 'Train' dataset
-      getCleanDataFrameFromTrain <- function (...){
+      getCleanDataFrameFromTrain <- function (DATA_PATH){
 
             print("Fetching train data set...")
 
@@ -86,7 +76,7 @@
 ##  ------------- Step 5 - start 
 
       # Function to get a clean data frame from the 'Test' dataset
-      getCleanDataFrameFromTest <- function(...){
+      getCleanDataFrameFromTest <- function(DATA_PATH){
 
             print("Fetching test data set...")
 
@@ -131,11 +121,11 @@
 ##  ------------- Step 6 - start 
 
       # Function to run the analysis and get the final tidy data set
-      runAnalysis <- function (...){
+      runAnalysis <- function (DATA_PATH){
 
             # Get the train and test data sets
-            trainData   <- getCleanDataFrameFromTrain()
-            testData    <- getCleanDataFrameFromTest()
+            trainData   <- getCleanDataFrameFromTrain(DATA_PATH)
+            testData    <- getCleanDataFrameFromTest(DATA_PATH)
 
             print("Merging the data sets ...")
 
@@ -162,4 +152,6 @@
 
 
 # Call the function to run the analysis
-runAnalysis()
+# The DATA_PATH arguement is the name of the folder containing the train and test data sets
+runAnalysis("UCI HAR Dataset")
+
