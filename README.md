@@ -40,8 +40,15 @@ This is the function which performs the analysis and writes the results back to 
 
 STEPS TO RUN THE ANALYSIS
 --------------------------------------------------------------------------------------------------------------------------
+Step 1 - Download the script run_analysis.R
 
-Run the script and then call the function runAnalysis(). The function takes only a single arguement which is the name of the folder containing the train and test data sets.
+Step 2 - Place the script in the folder which has the dataset.
+
+Step 3 - Run the script
+
+Step 4 - Call the function runAnalysis(). 
+
+The function takes only a single arguement which is the name of the folder containing the train and test data sets.
 For example, runAnalysis("UCI HAR Dataset")
 
 
